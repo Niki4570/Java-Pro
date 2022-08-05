@@ -3,34 +3,41 @@ import java.util.Locale;
 public class Main {
 
     public static void main (String[] args){
-        System.out.print("Hello world");
-        String str = "My Hillel Java homework";
+        String str = "   My   Hillel   Java homework";
         String str1 = "Aboba";
         String str2 = "RaDar";
         String str3 = "Hillel";
-        wordsCount(str);
-        isPalindrome(str1);
-        isPalindrome(str2);
-        isPalindrome(str3);
+        System.out.print(str+" -> "+wordsCount(str)+"\n");
+        System.out.print(str1+" -> "+isPalindrome(str1)+"\n");
+        System.out.print(str2+" -> "+isPalindrome(str2)+"\n");
+        System.out.print(str3+" -> "+isPalindrome(str3)+"\n");
     }
-    static void wordsCount(String str0)
+    static int wordsCount(String str0)
     {
         int counter = 0;
-        String[] words = str0.split(" +"); // исправил
-        System.out.print(str0+" -> "+words.length+"\n");
+        String[] words1 = str0.split(" +");
+        try {
+            words1[0].equals(" ");
+        } catch (Exception e) {
+            System.out.println("First symbol is 'space'.");
+        }
+        String[] words = str0.split(" +");
+        counter = words.length;
+        return (counter);
     }
-    static void isPalindrome(String str0)
+    static boolean isPalindrome(String str0)
     {
-
+        boolean pal = false;
         String str1 = str0.toLowerCase(Locale.ROOT);
         StringBuilder str2 = new StringBuilder(str1);
         str2.reverse();
         String result = str2.toString();
         if (result.equals(str1)) {
-            System.out.print(str0+" -> true\n");
+            pal = true;
         }
         else {
-            System.out.print(str0+" -> false\n");
+            pal = false;
         }
+        return pal;
     }
 }
