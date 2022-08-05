@@ -15,7 +15,8 @@ public class Main {
     }
     static void wordsCount(String str0)
     {
-        String[] words = str0.split(" ");
+        int counter = 0;
+        String[] words = str0.split(" +"); // исправил
         System.out.print(str0+" -> "+words.length+"\n");
     }
     static void isPalindrome(String str0)
