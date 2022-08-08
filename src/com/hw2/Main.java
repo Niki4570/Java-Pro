@@ -3,7 +3,7 @@ import java.util.Locale;
 public class Main {
 
     public static void main (String[] args){
-        String str = "   My   Hillel   Java homework";
+        String str = "    My    Hillel    Java homework  ";
         String str1 = "Aboba";
         String str2 = "RaDar";
         String str3 = "Hillel";
@@ -15,13 +15,8 @@ public class Main {
     static int wordsCount(String str0)
     {
         int counter = 0;
-        String[] words1 = str0.split(" +");
-        try {
-            words1[0].equals(" ");
-        } catch (Exception e) {
-            System.out.println("First symbol is 'space'.");
-        }
-        String[] words = str0.split(" +");
+        String str1 = str0.trim();
+        String[] words = str1.split(" +");
         counter = words.length;
         return (counter);
     }
