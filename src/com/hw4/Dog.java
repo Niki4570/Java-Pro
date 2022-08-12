@@ -1,13 +1,12 @@
 package com.hw4;
 
 public class Dog extends Animal {
-    public Dog() {
-        super();
-    }
+    protected static int dogCounter;
     public Dog(String name) {
         super(name);
         dogCounter++;
     }
+    public Dog() {}
     @Override
     public void Run(int distance){
         if (distance <= 500) {

@@ -1,13 +1,12 @@
 package com.hw4;
 
 public class Cat extends Animal {
-    public Cat() {
-        super();
-    }
+    protected static int catCounter;
     public Cat(String name) {
         super(name);
         catCounter++;
     }
+    public Cat() {}
     @Override
     public void Run(int distance){
         if (distance <= 200) {
@@ -18,6 +17,6 @@ public class Cat extends Animal {
         }
     }
     public void Swim(int distance){
-        System.out.print(name + " не умеет плавать" + "\n");
+        System.out.print(name + " не умеет плавать." + "\n");
     }
 }
