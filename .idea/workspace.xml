@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bc042fc-d24c-48dd-bf39-b437b54d91cc" name="Changes" comment="" />
+    <list default="true" id="2b8b8f3d-13d4-47ae-9220-fdbc85c4c3eb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +20,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2CvvSxhB61JuEEPHtMOJLlEKOsr" />
+  <component name="ProjectId" id="2DFpvHHAMdge7TgLmZf85xQQpQ1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,16 +29,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
+    "last_opened_file_path": "C:/Users/sweet/IdeaProjects/Hw1/src/com/hw1/Main.java"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hw2.Main" />
-      <module name="Hw2" />
+      <option name="MAIN_CLASS_NAME" value="com.hw3.Main" />
+      <module name="Hw3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hw2.*" />
+          <option name="PATTERN" value="com.hw3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,16 +55,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1bc042fc-d24c-48dd-bf39-b437b54d91cc" name="Changes" comment="" />
-      <created>1659695883276</created>
+      <changelist id="2b8b8f3d-13d4-47ae-9220-fdbc85c4c3eb" name="Changes" comment="" />
+      <created>1660304916027</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1659695883276</updated>
+      <updated>1660304916027</updated>
     </task>
     <servers />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
