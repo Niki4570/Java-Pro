@@ -18,6 +18,6 @@ public class Cat extends Animal {
         }
     }
     public void Swim(int distance){
-        System.out.print("Кот не умеет плавать");
+        System.out.print(name + " не умеет плавать" + "\n");
     }
 }
