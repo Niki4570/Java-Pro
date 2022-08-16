@@ -13,6 +13,10 @@ public class Main {
         Dog dog2 = new Dog();
         dog2.setName("Yuma");
         dog2.run(620);
+        Dog dog3 = new Dog();
+        dog3.setName("Rex");
+        Cat cat2 = new Cat();
+        cat2.setName("Richie");
         System.out.print("Количество котов: " + cat1.getCatCounter() + "\n" + "Количество собак: " + dog1.getDogCounter() + "\n" + "Количество животных: " + cat1.getAnimalCounter());
     }
 }

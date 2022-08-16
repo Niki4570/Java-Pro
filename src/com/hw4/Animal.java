@@ -1,7 +1,7 @@
 package com.hw4;
 
 public class Animal {
-    private String name;
+    protected String name;
     private static int animalCounter;
 
     public Animal() {
