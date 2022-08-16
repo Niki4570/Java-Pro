@@ -1,22 +1,32 @@
 package com.hw4;
 
 public class Cat extends Animal {
-    protected static int catCounter;
-    public Cat(String name) {
-        super(name);
+    private String catName;
+    private static int catCounter;
+
+    public Cat() {
         catCounter++;
     }
-    public Cat() {}
+
+    public int getCatCounter() {
+        return catCounter;
+    }
+
+    public void setName(String name) {
+        this.catName = name;
+    }
+
     @Override
-    public void Run(int distance){
+    public void run(int distance) {
         if (distance <= 200) {
-            System.out.print(name + " пробежал " + distance + " метров." + "\n");
-        }
-        else{
-            System.out.print(name + " остановился через " + 200 + " метров." + "\n");
+            System.out.print(catName + " пробежал " + distance + " метров." + "\n");
+        } else {
+            System.out.print(catName + " остановился через " + 200 + " метров." + "\n");
         }
     }
-    public void Swim(int distance){
-        System.out.print(name + " не умеет плавать." + "\n");
+
+    @Override
+    public void swim(int distance) {
+        System.out.print(catName + " не умеет плавать." + "\n");
     }
 }

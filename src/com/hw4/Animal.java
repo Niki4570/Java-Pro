@@ -1,25 +1,32 @@
 package com.hw4;
 
 public class Animal {
-    protected String name;
-    protected static int animalCounter;
-    public Animal(String name) {
-        this.name = name;
+    private String name;
+    private static int animalCounter;
+
+    public Animal() {
         animalCounter++;
     }
-    public Animal() {}
-    public void Run(int distance){
+    public int getAnimalCounter() {
+        return animalCounter;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void run(int distance) {
         if (distance <= 0) {
             System.out.print(name + " пробежал " + distance + " метров." + "\n");
-        }
-        else{
+        } else {
             System.out.print(name + " остановился через " + 0 + " метров." + "\n");
         }
     }
-    public void Swim(int distance){
+
+    public void swim(int distance) {
         if (distance <= 0) {
             System.out.print(name + " проплыл " + distance + " метров." + "\n");
-        } else{
+        } else {
             System.out.print(name + " остановился через " + 0 + " метров." + "\n");
         }
     }
