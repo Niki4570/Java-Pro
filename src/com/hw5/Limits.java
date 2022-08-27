@@ -1,6 +1,7 @@
 package com.hw5;
 
 public class Limits {
+    String name;
     int runLimit;
     int jumpLimit;
 

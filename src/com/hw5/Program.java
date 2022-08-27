@@ -21,9 +21,9 @@ public class Program {
         }
 
         Participant[] subjects = new Participant[3];
-        subjects[0] = new Person(100, 4);
-        subjects[1] = new Person(130, 10);
-        subjects[2] = new Person(160, 7);
+        subjects[0] = new Person("Vova",100, 4);
+        subjects[1] = new Person("Vlad",130, 10);
+        subjects[2] = new Person("Nikita",160, 7);
         Obstacle[] objects = new Obstacle[5];
         objects[0] = new Track(100);
         objects[1] = new Wall(4);
@@ -33,13 +33,26 @@ public class Program {
 
         for (int i = 0; i < subjects.length; i++) {
             for (int j = 0; j < objects.length; j++) {
-                if (objects[j]) {
-                    subjects[i].run();
-                    overcome();
+                if (objects[j] instanceof Track) {
+                    if (subjects[i].getRunLimit() >= ((Track) objects[j]).trackLength) {
+                        subjects[i].run();
+                        System.out.print("Участник " + subjects[i].getName() + " прошел препятствие (дорожка) на дистанции " + ((Track) objects[j]).trackLength + ".\n");
+                        subjects[i].overcome();
+                    }
+                    else {
+                        System.out.print("Участник " + subjects[i].getName() + " не прошел препятствие (дорожка) на дистанции " + ((Track) objects[j]).trackLength + ".\n" + "Пройдено " + subjects[i].getRunLimit() + ".\n");
+                        break;
+                    }
                 }
                 else{
-                    subjects[i].jump();
-
+                    if (subjects[i].getJumpLimit() >= ((Wall) objects[j]).wallHeight) {
+                        subjects[i].jump();
+                        System.out.print("Участник " + subjects[i].getName() + " прошел препятствие (стена) на высоте " + ((Wall) objects[j]).wallHeight + ".\n");
+                        subjects[i].overcome();
+                    } else {
+                        System.out.print("Участник " + subjects[i].getName() + " не прошел препятствие (стена) на высоте " + ((Wall) objects[j]).wallHeight + ".\n" + "Пройдено " + subjects[i].getJumpLimit() + ".\n");
+                        break;
+                    }
                 }
             }
         }

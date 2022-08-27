@@ -1,3 +1,4 @@
+/*
 package com.hw5;
 
 public class Cat implements Participant, Obstacle {
@@ -40,3 +41,4 @@ public class Cat implements Participant, Obstacle {
         }
     }
 }
+*/

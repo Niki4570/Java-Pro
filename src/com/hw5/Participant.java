@@ -1,7 +1,10 @@
 package com.hw5;
 
 public interface Participant {
-    public void run();
-    public void jump();
-    public void overcome();
+    String getName();
+    int getRunLimit();
+    int getJumpLimit();
+    void run();
+    void jump();
+    void overcome();
 }
