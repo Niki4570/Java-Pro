@@ -1,30 +1,26 @@
 package com.hw5;
 
-public class Person extends Limits implements Participant{
+public class Person implements Participant{
 
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
 
-    public int getRunLimit() {
-        return runLimit;
-    }
+    public int getRunLimit() {return runLimit;}
 
-    public int getJumpLimit() {
-        return jumpLimit;
-    }
+    public int getJumpLimit() {return jumpLimit;}
+
+    protected String name;
+    protected int runLimit;
+    protected int jumpLimit;
 
     public Person(String name, int runLimit, int jumpLimit) {
-        super();
+        this.name = name;
+        this.runLimit = runLimit;
+        this.jumpLimit = jumpLimit;
     }
 
-    public void run() {
-        System.out.print(name + " пробежал беговую дорожку.\n");
-    }
-    public void jump() {
-        System.out.print(name + " перепрыгнул стену.\n");
-    }
+    public void run() {System.out.print(name + " пробежал беговую дорожку.\n");}
 
-    public void overcome() {
-    }
+    public void jump() {System.out.print(name + " перепрыгнул стену.\n");}
+
+    public void overcome() {}
 }

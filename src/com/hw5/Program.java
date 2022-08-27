@@ -2,10 +2,6 @@ package com.hw5;
 
 public class Program {
     public static void main(String[] args) {
-        Circle cir = new Circle(5);
-        System.out.print("Cir's area is = " + cir.area() + "\n");
-        Triangle tri = new Triangle(5, 6, 7);
-        System.out.print("Tri's area is = " + tri.area() + "\n");
 
         Shape[] shapes = new Shape[5];
         shapes[0] = new Circle(5);
@@ -19,11 +15,13 @@ public class Program {
             areaSum = areaSum + shapes[i].area();
             System.out.print("Площадь " + (i+1) + " элемента = " + shapes[i].area() + "\n");
         }
+        System.out.print("\n /////////////////////// \n");
 
         Participant[] subjects = new Participant[3];
-        subjects[0] = new Person("Vova",100, 4);
-        subjects[1] = new Person("Vlad",130, 10);
-        subjects[2] = new Person("Nikita",160, 7);
+        subjects[0] = new Person("Nikita",130, 4);
+        subjects[1] = new Cat("Felix",100, 10);
+        subjects[2] = new Robot("CX/45",160, 7);
+
         Obstacle[] objects = new Obstacle[5];
         objects[0] = new Track(100);
         objects[1] = new Wall(4);
@@ -32,6 +30,7 @@ public class Program {
         objects[4] = new Track(150);
 
         for (int i = 0; i < subjects.length; i++) {
+            System.out.print("\n");
             for (int j = 0; j < objects.length; j++) {
                 if (objects[j] instanceof Track) {
                     if (subjects[i].getRunLimit() >= ((Track) objects[j]).trackLength) {

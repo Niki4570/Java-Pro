@@ -1,7 +1,7 @@
 package com.hw5;
 
 public class Wall implements Obstacle {
-    public int wallHeight;
+    protected int wallHeight;
 
     public Wall(int wallHeight) {
         this.wallHeight = wallHeight;

@@ -1,7 +1,7 @@
 package com.hw5;
 
 public class Track implements Obstacle {
-    public int trackLength;
+    protected int trackLength;
 
     public Track(int trackLength) {
         this.trackLength = trackLength;

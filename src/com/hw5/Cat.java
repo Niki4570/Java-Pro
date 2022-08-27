@@ -1,44 +1,37 @@
-/*
 package com.hw5;
 
-public class Cat implements Participant, Obstacle {
-    int runLimit = 125;
-    int jumpLimit = 10;
+public class Cat implements Participant{
 
-    public Cat(int runLimit, int jumpLimit) {
+    public String getName() {
+        return name;
+    }
+
+    public int getRunLimit() {
+        return runLimit;
+    }
+
+    public int getJumpLimit() {
+        return jumpLimit;
+    }
+
+    protected String name;
+    protected int runLimit;
+    protected int jumpLimit;
+
+    public Cat(String name, int runLimit, int jumpLimit) {
+        this.name = name;
         this.runLimit = runLimit;
         this.jumpLimit = jumpLimit;
     }
 
-    public void run(){
-        track();
+    public void run() {
+        System.out.print(name + " пробежал беговую дорожку.\n");
     }
 
     public void jump() {
-        wall();
+        System.out.print(name + " перепрыгнул стену.\n");
     }
 
     public void overcome() {
-        System.out.print("Человек пробежал беговую дорожку.\n");
-    }
-
-    public void track() {
-        long trackLength = Math.round(Math.random()*10);
-        if (runLimit >= trackLength) {
-            overcome();
-        }
-        else {
-            System.out.print("Кот не пробежал " + trackLength + " метров и выбывает.\n");
-        }
-    }
-    public void wall() {
-        long wallLength = Math.round(Math.random()*10);
-        if (jumpLimit >= wallLength) {
-            overcome();
-        }
-        else {
-            System.out.print("Кот не перепрыгнул через " + wallLength + "метров и выбывает.\n");
-        }
     }
 }
-*/
