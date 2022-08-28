@@ -6,8 +6,11 @@ public class Track implements Obstacle {
     public Track(int trackLength) {
         this.trackLength = trackLength;
     }
-    public void reachTrack() {
+
+    public int getTrackLength() {
+        return trackLength;
     }
-    public void reachWall() {
+    public int getWallHeight(){
+        return 0;
     }
 }

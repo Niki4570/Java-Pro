@@ -33,23 +33,18 @@ public class Program {
             System.out.print("\n");
             for (int j = 0; j < objects.length; j++) {
                 if (objects[j] instanceof Track) {
-                    if (subjects[i].getRunLimit() >= ((Track) objects[j]).trackLength) {
-                        subjects[i].run();
-                        System.out.print("Участник " + subjects[i].getName() + " прошел препятствие (дорожка) на дистанции " + ((Track) objects[j]).trackLength + ".\n");
-                        subjects[i].overcome();
+                    if (subjects[i].run(objects[j])) {
+                        continue;
                     }
                     else {
-                        System.out.print("Участник " + subjects[i].getName() + " не прошел препятствие (дорожка) на дистанции " + ((Track) objects[j]).trackLength + ".\n" + "Пройдено " + subjects[i].getRunLimit() + ".\n");
                         break;
                     }
                 }
                 else{
-                    if (subjects[i].getJumpLimit() >= ((Wall) objects[j]).wallHeight) {
-                        subjects[i].jump();
-                        System.out.print("Участник " + subjects[i].getName() + " прошел препятствие (стена) на высоте " + ((Wall) objects[j]).wallHeight + ".\n");
-                        subjects[i].overcome();
-                    } else {
-                        System.out.print("Участник " + subjects[i].getName() + " не прошел препятствие (стена) на высоте " + ((Wall) objects[j]).wallHeight + ".\n" + "Пройдено " + subjects[i].getJumpLimit() + ".\n");
+                    if (subjects[i].jump(objects[j])){
+                        continue;
+                    }
+                    else {
                         break;
                     }
                 }

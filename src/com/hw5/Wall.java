@@ -6,8 +6,10 @@ public class Wall implements Obstacle {
     public Wall(int wallHeight) {
         this.wallHeight = wallHeight;
     }
-    public void reachTrack() {
+    public int getTrackLength() {
+        return 0;
     }
-    public void reachWall() {
+    public int getWallHeight(){
+        return wallHeight;
     }
 }
