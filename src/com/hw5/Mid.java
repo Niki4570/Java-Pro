@@ -14,7 +14,6 @@ public class Mid implements Participant {
     public boolean run(Obstacle obstacle) {
         if (runLimit >= obstacle.getTrackLength()) {
             System.out.print("Участник " + name + " прошел препятствие (дорожка) на дистанции " + obstacle.getTrackLength() + ".\n");
-            overcome();
             return true;
         }
         else {
@@ -26,14 +25,17 @@ public class Mid implements Participant {
     public boolean jump(Obstacle obstacle) {
         if (jumpLimit >= obstacle.getWallHeight()) {
             System.out.print("Участник " + name + " прошел препятствие (стена) на высоте " + obstacle.getWallHeight() + ".\n");
-            overcome();
             return true;
         } else {
             System.out.print("Участник " + name + " не прошел препятствие (стена) на высоте " + obstacle.getWallHeight() + ".\n" + "Пройдено " + jumpLimit + ".\n");
             return false;
         }
     }
-    public void overcome() {
-
+    public boolean overcome(Obstacle obstacle, Participant participant) {
+        if (obstacle instanceof Track) {
+            return participant.run(obstacle);
+        } else {
+            return participant.jump(obstacle);
+        }
     }
 }

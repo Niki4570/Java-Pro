@@ -32,14 +32,8 @@ public class Program {
         for (Participant subject : subjects) {
             System.out.print("\n");
             for (Obstacle object : objects) {
-                if (object instanceof Track) {
-                    if (!subject.run(object)) {
-                        break;
-                    }
-                } else {
-                    if (!subject.jump(object)) {
-                        break;
-                    }
+                if (!subject.overcome(object, subject)) {
+                    break;
                 }
             }
         }
