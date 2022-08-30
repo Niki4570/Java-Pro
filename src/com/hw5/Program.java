@@ -29,22 +29,15 @@ public class Program {
         objects[3] = new Wall(6);
         objects[4] = new Track(150);
 
-        for (int i = 0; i < subjects.length; i++) {
+        for (Participant subject : subjects) {
             System.out.print("\n");
-            for (int j = 0; j < objects.length; j++) {
-                if (objects[j] instanceof Track) {
-                    if (subjects[i].run(objects[j])) {
-                        continue;
-                    }
-                    else {
+            for (Obstacle object : objects) {
+                if (object instanceof Track) {
+                    if (!subject.run(object)) {
                         break;
                     }
-                }
-                else{
-                    if (subjects[i].jump(objects[j])){
-                        continue;
-                    }
-                    else {
+                } else {
+                    if (!subject.jump(object)) {
                         break;
                     }
                 }
