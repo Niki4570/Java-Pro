@@ -31,11 +31,11 @@ public class Mid implements Participant {
             return false;
         }
     }
-    public boolean overcome(Obstacle obstacle, Participant participant) {
+    public boolean overcome(Obstacle obstacle) {
         if (obstacle instanceof Track) {
-            return participant.run(obstacle);
+            return run(obstacle);
         } else {
-            return participant.jump(obstacle);
+            return jump(obstacle);
         }
     }
 }

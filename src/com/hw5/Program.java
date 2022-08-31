@@ -32,7 +32,7 @@ public class Program {
         for (Participant subject : subjects) {
             System.out.print("\n");
             for (Obstacle object : objects) {
-                if (!subject.overcome(object, subject)) {
+                if (!subject.overcome(object)) {
                     break;
                 }
             }
